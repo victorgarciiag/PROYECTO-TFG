@@ -1,0 +1,648 @@
+*/ html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1e53;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(255, 102, 0) !important;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    padding: 0 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 0 5px 80px rgb(226, 126, 59);
+    z-index: 1000;
+    /* Hace que el encabezado esté sobre otros elementos */
+}
+
+nav .logo,
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo a,
+footer .logo a {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .logo img,
+footer .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+nav ul,
+footer .top ul {
+    display: flex;
+    gap: 40px;
+}
+
+nav button {
+    color: #1c1e53;
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 102, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: rgb(255, 102, 0);
+    border-color: rgb(255, 102, 0);
+    color: #fff;
+}
+
+nav button#menuButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 7px;
+}
+
+
+
+/*CLASE MAIN:*/
+.main {
+    background-color: rgb(241, 204, 192);
+    padding: 150px 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main .izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.main .izquierda h1 {
+    font-size: 40px;
+}
+
+.main .izquierda h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.main .izquierda h3 span {
+    color: rgb(255, 102, 0);
+}
+
+.main .izquierda p {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+
+.main .derecha img {
+    width: 800px;
+}
+
+
+/*Estilo para las flechas de las imagenes*/
+
+.derecha {
+    position: relative;
+    display: inline-block;
+    /* Esto asegura que el contenedor solo tome el ancho del contenido */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Centra verticalmente las flechas */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre las flechas */
+}
+
+.arrow i {
+    font-size: 50px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.imagen-carrusel {
+    transition: opacity 0.5s ease;
+    /* Animación de desvanecimiento durante 0.5 segundos */
+
+}
+
+.imagen-carrusel.oculto {
+    opacity: 0;
+    /* Hace que la imagen sea transparente cuando está oculta */
+}
+
+
+
+/*READY TO RACE: */
+.read-to-race {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Esto es opcional, para centrar verticalmente también */
+    position: relative;
+    /* Hace que el posicionamiento del texto sea relativo al contenedor */
+}
+
+.read-to-race .carrusel2 img {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    /* Añadir esta propiedad para centrar verticalmente la imagen */
+    margin: 0 auto;
+    /* Añadir esta propiedad para centrar horizontalmente la imagen */
+}
+
+.read-to-race .carrusel2 .texto-encima {
+    position: absolute;
+    /* Posicionamiento absoluto para el texto */
+    top: 50%;
+    /* Lo desplaza hacia abajo hasta la mitad del contenedor */
+    left: 50%;
+    /* Lo desplaza hacia la derecha hasta la mitad del contenedor */
+    transform: translate(-50%, -50%);
+    /* Centra el texto completamente */
+    text-align: center;
+    /* Alinea el texto al centro */
+    color: white;
+
+}
+
+
+.read-to-race .carrusel2 .texto-encima .boton-ourWorld {
+    color: white;
+    background-color: rgb(255, 102, 0);
+    /* Fondo del botón en naranja */
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 102, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+
+
+.read-to-race .carrusel2 .texto-encima h1 {
+    margin-bottom: 30px;
+    /* Ajusta el espacio entre el h1 y el botón según sea necesario */
+    font-size: 50px;
+}
+
+
+
+
+/*NOTICIAS:*/
+.noticias {
+    background-color: rgb(241, 204, 192);
+    padding: 110px 85px;
+}
+
+.noticias .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.noticias .header button {
+    background-color: #ff0000;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+}
+
+.noticias .header button i {
+    font-size: 26px;
+}
+
+.noticias .diferentes-noticias {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.noticias .diferentes-noticias .item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.noticias .diferentes-noticias .item:hover {
+    border-color: rgb(255, 102, 0);
+}
+
+.noticias .diferentes-noticias .item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 10px 20px 20px;
+}
+
+.noticias .diferentes-noticias .item .info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 32px 42px;
+}
+
+.noticias .diferentes-noticias .item .info p {
+    font-size: 13px;
+}
+
+.noticias .diferentes-noticias .item .info a {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: rgb(255, 102, 0);
+}
+
+.noticias .diferentes-noticias .item .info a i {
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+
+
+
+/*RESEÑAS: */
+.reseñas {
+    padding: 110px 85px;
+}
+
+.reseñas .customers {
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.reseñas .customers .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #006b6a;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reseñas .customers .item .estrellas {
+    color: #006b6a;
+    font-size: 22px;
+}
+
+.reseñas .customers .item:hover {
+    border-color: #5e3bee;
+}
+
+.reseñas .customers .item p {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.reseñas .customers .item .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reseñas .customers .item .user img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.reseñas .customers .item .user h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.reseñas .customers .item .user p {
+    font-size: 12px;
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: rgb(241, 204, 192);
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .top .rrss-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+footer .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #282938;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p {
+    font-size: 12px;
+}
+
+footer .bottom .links a {
+    font-size: 12px;
+    margin-left: 14px;
+}
+
+
+/*Para hacer responsivas las diferentes opciones de pantallas.*/
+@media screen and (max-width: 1200px) {
+    .main .izquierda h5 {
+        font-size: 18px;
+    }
+
+    .main .izquierda h3 {
+        font-size: 36px;
+    }
+
+    .main .izquierda p {
+        font-size: 18px;
+    }
+
+    .main .derecha img {
+        width: 380px;
+    }
+
+    .noticias .header h2,
+    .reseñas h1 {
+        font-size: 32px;
+    }
+
+    .about .right p {
+        font-size: 15px;
+    }
+
+    .reseñas .customers .item .estrellas {
+        font-size: 20px;
+    }
+
+    .reseñas .customers .item p {
+        font-size: 13px;
+    }
+
+    footer .top ul {
+        gap: 20px;
+    }
+
+    .texto-encima h1 {
+        font-size: 360px;
+        /* Reduce el tamaño de fuente del título */
+    }
+
+    .texto-encima a {
+        padding: 12px 24px;
+        /* Ajusta el padding del botón */
+        font-size: 20px;
+        /* Reduce el tamaño de fuente del botón */
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    nav button {
+        display: none;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .noticias .diferentes-noticias {
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .noticias .diferentes-noticias .item {
+        width: 48%;
+    }
+
+    .reseñas .customers {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .reseñas .customers .item {
+        width: 48%;
+    }
+
+    footer .top ul {
+        display: none;
+    }
+
+    .read-to-race .carrusel2 .texto-encima h1 {
+        font-size: 50px;
+        /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+    }
+
+    .texto-encima a {
+        padding: 10px 20px;
+        /* Ajusta el padding del botón */
+        font-size: 15;
+        /* Reduce el tamaño de fuente del botón */
+    }
+
+    .imagen-carrusel2 {
+        width: 90%;
+        /* Reduce el ancho a 90% para pantallas medianas */
+        height: auto;
+        /* Mantiene la proporción */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 42px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.open .logo {
+        display: none;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    nav button#menuButton {
+        display: flex;
+    }
+
+    .main {
+        padding: 42px;
+    }
+
+    .noticias {
+        padding: 60px 42px;
+    }
+
+    .noticias .diferentes-noticias {
+        gap: 18px;
+    }
+
+    .reseñas {
+        padding: 85px 42px;
+    }
+
+    footer {
+        padding: 85px 42px;
+    }
+
+    footer .bottom {
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+
+    .read-to-race .carrusel2 .texto-encima h1 {
+        font-size: 40px;
+        /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+    }
+
+    .texto-encima a {
+        padding: 8px 16px;
+        /* Ajusta el padding del botón */
+        font-size: 20px;
+        /* Reduce el tamaño de fuente del botón */
+    }
+
+    .imagen-carrusel2 {
+        width: 100%;
+        /* Reduce el ancho a 80% para pantallas pequeñas */
+        height: auto;
+        /* Mantiene la proporción */
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    nav .logo a {
+        font-size: 18px;
+    }
+
+    .main .izquierda h3 {
+        font-size: 32px;
+    }
+
+    .main .izquierda p {
+        font-size: 16px;
+    }
+
+    .main .izquierda button {
+        width: 100%;
+    }
+
+    .noticias .header button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .noticias .diferentes-noticias .item {
+        width: 80%;
+    }
+
+    .reseñas .customers .item {
+        width: 100%;
+    }
+
+    .read-to-race .carrusel2 .texto-encima h1 {
+        font-size: 15px;
+        /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+    }
+
+    .texto-encima a {
+        padding: 6px 12px;
+        /* Ajusta el padding del botón */
+        font-size: 15px;
+        /* Reduce el tamaño de fuente del botón */
+    }
+}

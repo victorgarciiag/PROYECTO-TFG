@@ -1,0 +1,50 @@
+FUNCIONALIDADES:
+
+- Inicio y registro de usuario
+- Formulario de contacto de ayuda
+- API de Google para el mapa
+- Carrito de compra
+- Operaciones CRUD: Cada empleado de la empresa puede añadir, editar o eliminar productos y noticias de manera eficiente, ya que tienen un portal en el que se logean y pueden hacer múltiples funciones desde la interfaz de la web.
+- Carrusel de imágenes
+- Filtros en el panel del trabajador
+- Calendario interactivo en el cual se puede seleccionar el día y la hora de una cita en el concesionario.
+
+PÁGINAS:
+
+- Index: Donde esta la pagina principal con las diferentes opciones que se puede realizar en la web.
+- Accesorios: es una tienda, donde hay un carrito hecho con js
+- Concesionarios: aquí es donde esta integrada la API con la ubicación en mapa del concesionario.
+- Ayuda: esto es un formulario en el que el cliente rellena y le llega a los trabajadores del concesionario.
+- Pide tu cita: aquí tenemos un login y un registro, el login es para los clientes y el registro es para los nuevos clientes que quieran una cita. Ya que para pedir una cita se exige un login, el cual te lleva a la pagina reserva
+- Reserva: la pagina reserva esta formada por un calendario que filtra los días pasado y cada casilla del día tiene un botón en el cual te lleva al formulario de reserva, en el que se tiene un formulario para la cita.
+- Área personal: aquí tenemos un login, en el cual solo tienen permisos los administradores, es decir los trabajadores. Aquí una vez te logueas te lleva a una pagina que ofrece diferentes opciones, que son las siguientes: 
+- Opciones administrador: 
+	- Añadir productos: aquí mediante scrum podemos insertar, editar, o eliminar productos.
+	- Añadir noticias: aquí mas de lo mismo, podemos insertar o eliminar noticias.
+	- Panel formulario ayuda: y por último tenemos esta página en la que hay una tabla con todos los datos recibido de los formulario de ayuda, en 	los que se muestra todos los campos y con el contenido que ha puesto el cliente. 
+	- Tenemos también la opción de cerrar sesión.
+- Ultimas noticias: una pagina simple de información con las ultimas noticias. No tiene ninguna funcionalidad esta página.
+- Política de privacidad
+- Términos y condiciones
+
+
+COSAS POR HACER: 
+
+- Tema de las cookies y términos y condiciones		
+- Mirar bien que sea todo responsive
+- Encriptar contraseña, NO VALE EL MD5
+- Poner los errores encontrados a lo largo de la elaboración del proyecto
+- Esquema entidad relacion
+
+IDEAS PÁGINAS FUTURAS:
+
+- Hacer una página de reserva de citas para el mecanico
+    - Lo suyo es que para esto sea necesario que el cliente se registre y para hacer una resrva tenga una cuenta.
+    - La idea es poner un calendario con botones de reserva para los dias.
+    - Cuando el cliente pulse en el boton le redirija a la pagina de registro/inicio de sesion
+    - Una vez se haya logeado, le mande a una pagina donde le diga que se ha registrado su cita con exito
+- Hacer un deslogin
+
+
+
+

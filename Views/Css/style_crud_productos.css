@@ -1,0 +1,309 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1CCC0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor principal para limitar el ancho */
+.container {
+    width: 90%;
+    /* Ajusta al 90% de la pantalla, dejando márgenes */
+    max-width: 1200px;
+    /* Ancho máximo para grandes pantallas */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Mensaje de éxito/error */
+p {
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+p.success {
+    background-color: #e0f7e0;
+    color: #2d7c2d;
+}
+
+p.error {
+    background-color: #f7e0e0;
+    color: #7c2d2d;
+}
+
+/* Formulario de añadir producto */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+}
+
+form h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="url"],
+form input[type="file"],
+form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button[type="submit"] {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #e66a00;
+}
+
+/* Estilos del logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    /* Asegura que el logo esté por encima de la overlay */
+}
+
+.logo img {
+    width: 100px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ff5722;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Contenedor de productos */
+.producto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.producto img {
+    max-width: 100%;
+    /* Mantén el ajuste responsivo */
+    width: 50%;
+    /* Esto hará que la imagen ocupe todo el ancho disponible en su contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.producto a {
+    color: #ff7f0e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.producto a:hover {
+    color: #e66a00;
+}
+
+/* Botones de editar y eliminar */
+.producto .botones {
+    display: flex;
+    /* Usa Flexbox para alinear los botones en línea */
+    justify-content: start;
+    /* Alinea los botones a la izquierda */
+    gap: 10px;
+    /* Espacio entre los botones */
+    margin-top: 10px;
+}
+
+.producto a.edit,
+.producto a.delete {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.producto a.edit {
+    background-color: #4caf50;
+}
+
+.producto a.edit:hover {
+    background-color: #43a047;
+}
+
+.producto a.delete {
+    background-color: #f44336;
+}
+
+.producto a.delete:hover {
+    background-color: #e53935;
+}
+
+/* Estilo para los enlaces de productos si es necesario */
+a.product-link {
+    color: blue;
+    text-decoration: none;
+}
+
+a.product-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de la tabla de productos */
+table.product-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.product-list th,
+table.product-list td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table.product-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+table.product-list tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+table.product-list tr {
+    background-color: #ffffff;
+}
+
+table.product-list img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilo de los enlaces de acciones (Eliminar y Editar) */
+.delete,
+.edit {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff5733;
+    /* Naranja para eliminar */
+    border-radius: 4px;
+}
+
+.edit {
+    background-color: #4CAF50;
+    /* Verde para editar */
+}
+
+.delete:hover,
+.edit:hover {
+    opacity: 0.8;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los mensajes */
+.message {
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para mensaje de éxito (verde) */
+.success {
+    background-color: #28a745;
+    /* Color verde */
+    color: white;
+}
+
+/* Estilo para mensaje de error (rojo) */
+.error {
+    background-color: #dc3545;
+    /* Color rojo */
+    color: white;
+}

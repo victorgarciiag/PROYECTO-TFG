@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px 40px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+h1 {
+    margin: 0;
+    color: black;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contact-button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #F1CCC0;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.center-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+.image-content {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#map {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #F1CCC0;
+    color: black;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el mapa */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}

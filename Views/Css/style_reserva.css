@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    background-color: #F1CCC0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.dia {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dia h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.boton-reserva {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.boton-reserva:hover {
+    background-color: #388E3C;
+}
+
+.boton-reserva.dia-pasado {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.selector-mes {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .calendario {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

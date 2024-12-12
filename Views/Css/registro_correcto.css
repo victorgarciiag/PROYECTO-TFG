@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Centrar verticalmente */
+    text-align: center;
+    /* Centrar el texto */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff;
+    /* Fondo blanco para el contenedor */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    padding: 20px;
+    /* Espaciado interno */
+    max-width: 90%;
+    /* Ancho máximo del contenedor */
+    width: 350px;
+    /* Ancho fijo para móviles */
+}
+
+/* Estilos del encabezado */
+h1 {
+    color: #28a745;
+    /* Color verde */
+    font-size: 20px;
+    /* Tamaño de la fuente */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+}
+
+/* Estilos del mensaje */
+p {
+    color: #555;
+    /* Color gris para el texto */
+    margin-bottom: 20px;
+    /* Espacio inferior */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+}
+
+/* Estilos del botón */
+.button {
+    display: inline-block;
+    background-color: #747372;
+    /* Naranja claro */
+    color: #fff;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FFCC80;
+    /* Naranja más claro para el hover */
+}
